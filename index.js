@@ -25,7 +25,7 @@ const checkUserId = (request, response, next) => {
 
 app.get('/users', (request, response) => {
    return response.json(users)
-   console.log(users)
+   
 })
 
 app.post('/users', (request, response) => {
