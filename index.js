@@ -1,3 +1,5 @@
+
+
 const express = require('express')
 const uuid = require('uuid')
 const port = 3001
@@ -17,11 +19,13 @@ const checkUserId = (request, response, next) => {
    request.userIndex = index
    request.userIndex = id
    next()
+   
 }
 
 
 app.get('/users', (request, response) => {
    return response.json(users)
+   console.log(users)
 })
 
 app.post('/users', (request, response) => {
@@ -50,5 +54,15 @@ app.delete('/users/:id', checkUserId, (request, response) => {
 })
 
 app.listen(port, () => {
-   console.log(`🙏Server started on port ${port}`)
+   console.log(`🙏Server started on port ${port}`)
+   
 })
+
+
+
+
+
+
+
+
+ 
